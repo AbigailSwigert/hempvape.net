@@ -9,7 +9,7 @@
 
         <style type="text/css">
             body {
-                background-color: rgb(250, 250, 250);
+                background-color: rgb(240, 240, 240);
             }
             #centerLogo {
                 width: 20vw;
@@ -29,16 +29,12 @@
                 -webkit-box-shadow: 2px 2px 10px rgb(206, 206, 206);
                 -moz-box-shadow: 2px 2px 10px rgb(206, 206, 206);
                 background-color: rgb(27, 27, 27);
-                padding-bottom: 10px;
+                overflow: hidden;
             }
             .banner {
-                background-image: url(banner-01.svg);
-                background-size: 100% auto;
-                background-repeat: no-repeat;
+                height: 250px;
                 width: 100%;
-                height: 225px;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
+                object-fit: cover;
             }
             #name {
                 width: 50vw;
@@ -67,12 +63,36 @@
                 height: 100px;
                 width: 100px;
             }
+            #form {
+                width: 50vw;
+                margin: 100px auto 20px auto;
+                border-radius: 10px;
+                color: white;
+            }
+            #submit, #submit:visited {
+                background-color: #FFDD15;
+            }
+            #submit:hover {
+                background-color: rgb(218, 188, 19);
+            }
+            @media screen and (max-width: 800px){
+                #form {
+                    width: 75vw;
+                    margin: auto;
+                }
+            }
+            @media screen and (max-width: 800px){
+                h1{
+                    font-size: 150%;
+                    padding-top: 10px;
+                }
+            }
         </style>
     </head>
     <body>
         <div id="centerLogo"><img src="HVLogo.svg"></div>
         <div id="container">
-            <div class="banner"></div> <!--Make the background a nested img so it can cover the area and stay the same size during resizing-->
+            <img class="banner" src="banner-01.svg">
             <div id="name"><img src="HVText.svg"></div>
             <img class="productPhoto" src="HempVapeTropicalTropiKava.png">
             <div id="features">
@@ -89,6 +109,26 @@
                     <h3>Designed For Fast Absorption</h3>
                 </div>
             </div>
+            <div id="form">
+                <h1>Need to contact us?</h1>
+                <small id="requiredFields" class="form-text text-muted">All fields are required</small><br>
+                <form action="contact.php" method="post">
+                    <div class="form-group">
+                        <label for="fullname">Your Name:</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="JaneDoe@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Let us know what this is about:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button id="submit" type="submit" name="submit" class="btn">Submit</button>
+                </form>
+            </div>
+            <img class="banner" src="banner-01.svg">
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
