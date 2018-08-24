@@ -9,7 +9,7 @@
         z-index: 2;
         object-fit: contain;
         margin-top: 20px;
-         margin-left: 20px;
+        margin-left: 20px;
     }
     #container {
         width: 95vw;
@@ -17,9 +17,9 @@
         z-index: 1;
         position: relative;
         border-radius: 20px;
-        box-shadow: 2px 2px 10px rgb(206, 206, 206);
-        -webkit-box-shadow: 2px 2px 10px rgb(206, 206, 206);
-        -moz-box-shadow: 2px 2px 10px rgb(206, 206, 206);
+        box-shadow: 2px 2px 10px rgb(150, 150, 150);
+        -webkit-box-shadow: 2px 2px 10px rgb(150, 150, 150);
+        -moz-box-shadow: 2px 2px 10px rgb(150, 150, 150);
         background-color: rgb(27, 27, 27);
         overflow: hidden;
     }
@@ -53,7 +53,7 @@
     .webBanner {
         width: 75%;
         height: auto;
-        margin: 50px auto 0 auto;
+        margin: 20px auto;
         display: block;
     }
     .mainText {
@@ -92,6 +92,92 @@
         color: rgb(0, 0, 0);
         border-color: rgba(0, 0, 0, 0.4);
     }
+    #productsGrid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .productCard {
+        width: 250px;
+        height: 300px;
+        text-align: center;
+        background-color: rgb(228, 228, 228);
+        box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        -webkit-box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        -moz-box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        border-radius: 8px;
+        margin: 10px;
+    }
+    .productPhotos {
+        object-fit: contain;
+        width: 200px;
+        height: 250px;
+        margin: auto;
+    }
+    #blog {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .blogPost {
+        width: 45vw;
+        height: 70vh;
+        box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        -webkit-box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        -moz-box-shadow: 2px 2px 10px rgb(0, 0, 0);
+        border-radius: 8px;
+        margin: 10px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .yellow {
+        background-color: #FDD900;
+    }
+    .orange {
+        background-color: #FAAF40;
+    }
+    .blue {
+        background-color: #52B5DF;
+    }
+    .green {
+        background-color: #29B473;
+    }
+    .blogPhoto {
+        object-fit: cover;
+        width: 45vw;
+        height: 60vh;
+    }
+    .title {
+        text-align: center;
+        margin: 10px auto;
+        color: white;
+    }
+    #faqContent {
+        width: 90vw;
+        margin: 20px auto;
+    }
+    #form {
+        width: 50vw;
+        margin: 20px auto;
+        border-radius: 10px;
+        color: white;
+    }
+    #submit, #submit:visited {
+        background-color: #52B5DF;
+    }
+    #submit:hover {
+        background-color: #15A0DB;
+    }
+    @media (max-width: 800px) {
+        .blogPost {
+            width: 80vw;
+        }    
+        .blogPhoto {
+            width: 80vw;
+        }  
+    }
     @media (max-width: 540px) {
         h4 {
             font-size: 100%;
@@ -112,4 +198,24 @@
         #sideNav {
             display: inherit;
         }
+        #form {
+            width: 80vw;
+        }
+        h1 {
+            font-size: 200%;
+        }
+        .productCard {
+            width: 150px;
+            height: 175px;
+        }
+        .productPhotos {
+            width: 100px;
+            height: 125px;
+        }
+        .blogPost {
+            height: 50vh;
+        }    
+        .blogPhoto {
+            height: 40vh;
+        } 
     }
