@@ -12,14 +12,9 @@
         margin-left: 20px;
     }
     #container {
-        width: 95vw;
-        margin: 20px auto;
+        width: 100vw;
         z-index: 1;
         position: relative;
-        border-radius: 20px;
-        box-shadow: 2px 2px 10px rgb(150, 150, 150);
-        -webkit-box-shadow: 2px 2px 10px rgb(150, 150, 150);
-        -moz-box-shadow: 2px 2px 10px rgb(150, 150, 150);
         background-color: rgb(27, 27, 27);
         overflow: hidden;
     }
